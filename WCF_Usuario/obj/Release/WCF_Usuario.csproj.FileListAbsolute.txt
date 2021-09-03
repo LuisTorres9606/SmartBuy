@@ -1,0 +1,7 @@
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Usuario\bin\Usuario.dll.config
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Usuario\bin\Usuario.dll
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Usuario\bin\Usuario.pdb
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Usuario\obj\Release\WCF_Usuario.csprojAssemblyReference.cache
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Usuario\obj\Release\WCF_Usuario.csproj.CoreCompileInputs.cache
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Usuario\obj\Release\Usuario.dll
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Usuario\obj\Release\Usuario.pdb

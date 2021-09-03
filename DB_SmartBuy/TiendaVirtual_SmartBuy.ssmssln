@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "TiendaVirtual_SmartBuy", "TiendaVirtual_SmartBuy\TiendaVirtual_SmartBuy.ssmssqlproj", "{48ED1A90-F4EF-4ABB-9A6E-C5C2B3F5F1F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48ED1A90-F4EF-4ABB-9A6E-C5C2B3F5F1F6}.Default|Default.ActiveCfg = Default
+		{8F20CA7A-EE9F-433B-AB85-147C36093EAE}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

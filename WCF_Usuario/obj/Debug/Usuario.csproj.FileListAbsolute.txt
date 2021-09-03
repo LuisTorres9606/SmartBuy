@@ -1,0 +1,9 @@
+C:\Users\luill\OneDrive\Escritorio\Universidad\Programacion_IV\Usuario Y producto\Usuario\obj\Debug\Usuario.csprojAssemblyReference.cache
+C:\Users\luill\OneDrive\Escritorio\Universidad\Programacion_IV\Usuario Y producto\Usuario\obj\Debug\Usuario.csproj.CoreCompileInputs.cache
+C:\Users\Ltorr\Desktop\Usuario Y producto\Usuario\obj\Debug\Usuario.csproj.CoreCompileInputs.cache
+C:\Users\Ltorr\Desktop\Usuario Y producto\Usuario\bin\Usuario.dll.config
+C:\Users\Ltorr\Desktop\Usuario Y producto\Usuario\bin\Usuario.dll
+C:\Users\Ltorr\Desktop\Usuario Y producto\Usuario\bin\Usuario.pdb
+C:\Users\Ltorr\Desktop\Usuario Y producto\Usuario\obj\Debug\Usuario.dll
+C:\Users\Ltorr\Desktop\Usuario Y producto\Usuario\obj\Debug\Usuario.pdb
+C:\Users\Ltorr\Desktop\Usuario Y producto\Usuario\obj\Debug\Usuario.csprojAssemblyReference.cache

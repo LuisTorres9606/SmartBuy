@@ -1,0 +1,7 @@
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\Web_SmartBuy\WCF_Factura\bin\WCF_Factura.dll.config
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\Web_SmartBuy\WCF_Factura\bin\WCF_Factura.dll
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\Web_SmartBuy\WCF_Factura\bin\WCF_Factura.pdb
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\Web_SmartBuy\WCF_Factura\obj\Debug\WCF_Factura.csproj.CoreCompileInputs.cache
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\Web_SmartBuy\WCF_Factura\obj\Debug\WCF_Factura.dll
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\Web_SmartBuy\WCF_Factura\obj\Debug\WCF_Factura.pdb
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\Web_SmartBuy\WCF_Factura\obj\Debug\WCF_Factura.csproj.AssemblyReference.cache

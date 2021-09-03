@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56464/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Productos" />
+  <xs:import schemaLocation="http://localhost:56464/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Productos.Models" />
+  <xs:element name="NuevoProducto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Categoria" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="precio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+        <xs:element minOccurs="0" name="Foto" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NuevoProductoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Modificar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idproducto" type="xs:int" />
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Categoria" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="precio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+        <xs:element minOccurs="0" name="Foto" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarProducto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarProductoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Productos" minOccurs="0" name="BuscarProductoResult" nillable="true" type="q1:ArrayOfProducto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductosMarca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductosMarcaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Productos" minOccurs="0" name="ProductosMarcaResult" nillable="true" type="q2:ArrayOfProducto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductosCategoria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Categoria" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductosCategoriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Productos" minOccurs="0" name="ProductosCategoriaResult" nillable="true" type="q3:ArrayOfProducto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Marcas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarcasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Productos.Models" minOccurs="0" name="MarcasResult" nillable="true" type="q4:ArrayOfMarca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BusquedaId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_producto" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BusquedaIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Productos" minOccurs="0" name="BusquedaIdResult" nillable="true" type="q5:Producto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

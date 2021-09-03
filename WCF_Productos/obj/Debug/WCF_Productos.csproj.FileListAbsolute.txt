@@ -1,0 +1,7 @@
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Productos\bin\WCF_Productos.dll.config
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Productos\bin\WCF_Productos.dll
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Productos\bin\WCF_Productos.pdb
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Productos\obj\Debug\WCF_Productos.csproj.CoreCompileInputs.cache
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Productos\obj\Debug\WCF_Productos.dll
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Productos\obj\Debug\WCF_Productos.pdb
+C:\Users\Ltorr\OneDrive\Universidad\Programación\IV\Proyecto\WCF_Productos\obj\Debug\WCF_Productos.csproj.AssemblyReference.cache

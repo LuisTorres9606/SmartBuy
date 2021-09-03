@@ -1,0 +1,38 @@
+﻿@using Web_SmartBuy.Models;
+@using System.Globalization;
+
+@{
+    ViewBag.Title = "Productos Categoria";
+    List<Producto> Productos = (List<Producto>)TempData["ProductosCategoria"];
+
+}
+
+<h2>@ViewBag.Message</h2>
+
+<link href="~/Content/CardMarca.css" rel="stylesheet" />
+
+<div class="row">
+    <form action="/Productos/WishList">
+        @for (int i = 0; i < Productos.Count; i++)
+        {
+            var base64 = Convert.ToBase64String(Productos[i].FOTO);
+            var ImgProducto = String.Format("data:image/gif;base64,{0}", base64);
+
+            <div class="card col-md-3 img-rounded">
+                <img src="@ImgProducto" class="rounded-top card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text"><b>@Productos[i].MARCA</b></p>
+                    <h3 class="card-title">@Productos[i].NOMBRE</h3>
+                    <input class="card-text" id="Input" name="IdProducto" value="@Productos[i].ID_PRODUCTO" type="text" readonly="readonly" />
+                    @if (Session["Usuario"] != null)
+                    {
+                        <input class="card-text" id="Input" name="Cantidad" value="1" type="number" />
+                        <p class="card-text"><b>₡ @Productos[i].PRECIO</b></p>
+                        <button type="submit" class="btn btn-primary" style="margin-bottom:10px;">Agregar Carrito</button>
+                    }
+                </div>
+            </div>
+        }
+    </form>
+</div>
+

@@ -1,0 +1,151 @@
+﻿@using Web_SmartBuy.Models;
+@model Web_SmartBuy.Models.Usuario
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMARTBUY - @ViewBag.Title</title>
+    <link rel="shortcut icon" href="~/Content/Image/SmartBuy_Black(0).png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="~/Content/NavBar.css" rel="stylesheet" />
+    <script src="~/Scripts/Navbar.js"></script>
+    <link href="~/Content/Principal.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light">
+        <div class="navbar-header">
+            <a href='@Url.Action("Index", "Home")' class="navbar-brand">Smart<b>Buy</b></a>
+
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="navbar-toggler-icon"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="@Url.Action("Index","Home")">Inicio</a></li>
+                <li><a href="@Url.Action("Productos","Productos")">Productos</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Categorías <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href='@Url.Action("ProductosCategoria", "Productos", new { Marca = "Accesorios" })'>Accesorios</a></li>
+                        <li><a href='@Url.Action("ProductosCategoria", "Productos", new { Marca = "Jackets" })'>Jackets</a></li>
+                        <li><a href='@Url.Action("ProductosCategoria", "Productos", new { Marca = "Camisas" })'>Camisas</a></li>
+                        <li><a href='@Url.Action("ProductosCategoria", "Productos", new { Marca = "Pantalones" })'>Pantalones</a></li>
+                        <li><a href='@Url.Action("ProductosCategoria", "Productos", new { Marca = "Calzado" })'>Calzado</a></li>
+                    </ul>
+                </li>
+                <li><a href="@Url.Action("About","Home")">Acerca</a></li>
+                <li><a href="@Url.Action("Contact","Home")">Contactanos!</a></li>
+            </ul>
+            <form class="navbar-form form-inline">
+                <div class="input-group search-box">
+                    <input type="text" id="search" class="form-control" placeholder="Search here...">
+                    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                </div>
+            </form>
+            @if (Session["Usuario"] != null)
+            {
+
+                Usuario Usuario = (Usuario)Session["Usuario"];
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <div class="nav-line-1-container"><span id="nav-link-accountList-nav-line-1" class="nav-line-1 nav-progressive-content">Hola @Usuario.USERNAME</span></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            @if (Usuario.Rol == "A")
+                            {
+                                <li><a href="@Url.Action("AgregarProducto","Productos")">Admim Productos</a></li>
+                                <hr style="margin-top: 0px; margin-bottom: 0px;" />
+                            }
+
+                            <li><a href="@Url.Action("MiCuenta","Usuario")">Mi Cuenta</a></li>
+                            <li><a href="@Url.Action("Carrito","Facturas")"> Carrito</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <form action="/Usuario/CerrarSesion">
+                            <input type="submit" class="btn btn-primary btn-block get-started-btn mt-1 mb-1" value="Cerrar Sesion">
+                        </form>
+
+                    </li>
+                </ul>
+            }
+            else
+            {
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Login</a>
+                        <ul class="dropdown-menu form-wrapper">
+                            <li>
+                                <form action="/Usuario/login" method="post">
+                                    <p class="hint-text">Sign in with your social media account</p>
+                                    <div class="form-group social-btn clearfix">
+                                        <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+                                        <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+                                    </div>
+                                    <div class="or-seperator"><b>or</b></div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="Usuario" placeholder="Username" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="Contrasenia" placeholder="Password" required="required" />
+                                    </div>
+                                    <input type="submit" class="btn btn-primary btn-block" value="Login">
+                                    <div class="form-footer">
+                                        <a href="#">Forgot Your password?</a>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Sign up</a>
+                        <ul class="dropdown-menu form-wrapper">
+                            <li>
+                                <form action="/Usuario/CreateUser" method="post">
+                                    <p class="hint-text">Fill in this form to create your account!</p>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="Usuario" placeholder="Username" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="Contrasenia" placeholder="Password" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="Contraseniav" placeholder="Confirm Password" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary btn-block" value="Sign up">
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            }
+        </div>
+        <script src="~/Scripts/jquery-3.3.1.js"></script>
+        <script src="~/Scripts/Usuario/Login.js"></script>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @(DateTime.Now.Year) - SMARTBUY TU MEJOR TIENDA EN LÍNEA </p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

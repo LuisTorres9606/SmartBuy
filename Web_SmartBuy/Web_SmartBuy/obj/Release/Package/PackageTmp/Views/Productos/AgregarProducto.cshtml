@@ -1,0 +1,116 @@
+﻿@using Web_SmartBuy.Models;
+@{
+    ViewBag.Title = "AgregarProducto";
+    Usuario User = (Usuario)Session["Usuario"];
+}
+
+<style>
+    #success_message {
+        display: none;
+    }
+</style>
+
+<link href="~/Content/MiCuenta.css" rel="stylesheet" />
+
+@{
+    if (Session["Usuario"] != null && User.Rol == "A")
+    {
+        <form class="well form-horizontal" action="/Productos/AgregarProducto" method="post" id="contact_form" enctype="multipart/form-data">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>@ViewBag.Message</legend>
+
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Id Producto</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-qrcode"></i></span>
+                            <input class="form-control" name="IdProducto" placeholder="Id Producto" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Nombre</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input class="form-control" name="Nombre" placeholder="Nombre" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Marca</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input class="form-control" name="Marca" placeholder="Marca" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Detalle</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-align-justify"></i></span>
+                            <input class="form-control" name="Detalle" placeholder="Detalle" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Precio</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+                            <input class="form-control" name="Precio" placeholder="Precio" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text area -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Cantidad</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-sort"></i></span>
+                            <input class="form-control" name="Cantidad" placeholder="Cantidad" type="number">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text area -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Imagen</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-inbox"></i></span>
+                            <input class="form-control" name="Imagen" type="file">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success message -->
+                <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning" name="Button" value="true">Send <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    }
+} 

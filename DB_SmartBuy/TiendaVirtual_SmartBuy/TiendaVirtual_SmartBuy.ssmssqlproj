@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="TiendaVirtual_SmartBuy">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="DESKTOP-FOB2S6T:DESKTOP-FOB2S6T\Ltorr">
+          <Created>2021-04-13T12:15:17.9838667-06:00</Created>
+          <Type>SQL</Type>
+          <Server>DESKTOP-FOB2S6T</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Executes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-FOB2S6T:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-FOB2S6T</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Executes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Tablas.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-FOB2S6T:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-FOB2S6T</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Tablas.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

@@ -1,0 +1,6 @@
+C:\Users\Ltorr\Desktop\Usuario Y producto\Productos\bin\Productos.dll.config
+C:\Users\Ltorr\Desktop\Usuario Y producto\Productos\bin\Productos.dll
+C:\Users\Ltorr\Desktop\Usuario Y producto\Productos\bin\Productos.pdb
+C:\Users\Ltorr\Desktop\Usuario Y producto\Productos\obj\Debug\Productos.csproj.CoreCompileInputs.cache
+C:\Users\Ltorr\Desktop\Usuario Y producto\Productos\obj\Debug\Productos.dll
+C:\Users\Ltorr\Desktop\Usuario Y producto\Productos\obj\Debug\Productos.pdb

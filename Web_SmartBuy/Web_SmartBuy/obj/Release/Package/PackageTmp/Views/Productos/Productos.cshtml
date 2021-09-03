@@ -1,0 +1,32 @@
+﻿@using System;
+
+@{
+    ViewBag.Title = "Productos";
+}
+
+<link href="~/Content/Cards.css" rel="stylesheet" />
+
+<h2>@ViewBag.Message</h2>
+
+
+<div class="row">
+    <form action="">
+        <div class="card col-md-3 img-rounded" style="margin-left:5px;margin-right:5px;">
+            <img src="~/Content/Image/Adidas.png" class="card-img-top img-rounded" alt="...">
+            <div class="card-body">
+                <a href='@Url.Action("ProductosMarca", "Productos", new { Marca = "Adidas" })' class="btn btn-primary">Ver Articulos</a>
+            </div>
+        </div>
+    </form>
+
+    <form action="/Productos/Productos">
+        <div class="card col-md-3 img-rounded" style="margin-left:5px;margin-right:5px;">
+            <img src="~/Content/Image/Nike.jpg" class="card-img-top img-rounded" alt="...">
+            <div class="card-body">
+                <a href='@Url.Action("ProductosMarca", "Productos", new { Marca = "Nike" })' class="btn btn-primary">Ver Articulos</a>
+            </div>
+        </div>
+    </form>
+
+
+</div>

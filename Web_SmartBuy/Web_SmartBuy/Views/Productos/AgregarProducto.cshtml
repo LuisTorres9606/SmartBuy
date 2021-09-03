@@ -1,0 +1,135 @@
+﻿@using Web_SmartBuy.Models;
+@{
+    ViewBag.Title = "AgregarProducto";
+    Usuario User = (Usuario)Session["Usuario"];
+    List <Marca> Marcas = (List<Marca>)TempData["Marcas"];
+    List<Categoria> Categorias = (List<Categoria>)TempData["Categorias"];
+}
+
+<style>
+    #success_message {
+        display: none;
+    }
+</style>
+
+<link href="~/Content/MiCuenta.css" rel="stylesheet" />
+
+@{
+    if (Session["Usuario"] != null && User.ROL == "A")
+    {
+        <form class="well form-horizontal" action="/Productos/AgregarProducto" method="post" id="contact_form" enctype="multipart/form-data">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>@ViewBag.Message</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Nombre</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input class="form-control" name="Nombre" placeholder="Nombre" type="text" required="required">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Marca</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <select name="Marca" class="form-control">
+                                @foreach (Marca Marc in Marcas)
+                                {
+                                    <option name="Marca" value="@Marc.NOMBRE">@Marc.NOMBRE</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Categoria</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <select name="Categoria" class="form-control">
+                                <option name="Categoria" value="Accesorios">Accesorios</option>
+                                <option name="Categoria" value="Jackets">Jackets</option>
+                                <option name="Categoria" value="Camisas">Camisas</option>
+                                <option name="Categoria" value="Pantalones">Pantalones</option>
+                                <option name="Categoria" value="Calzado">Calzado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Detalle</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-align-justify"></i></span>
+                            <input class="form-control" name="Detalle" placeholder="Detalle" type="text" required="required">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Precio</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+                            <input class="form-control" name="Precio" placeholder="Precio" type="number" required="required">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text area -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Cantidad</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-sort"></i></span>
+                            <input class="form-control" name="Cantidad" placeholder="Cantidad" type="number" required="required">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text area -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Imagen</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-inbox"></i></span>
+                            <input class="form-control" name="Imagen" type="file">
+                        </div>
+                    </div>
+                </div>
+
+                @if (TempData["ExitoProducto"] != null)
+                {
+                    <!-- Success message -->
+                <div class="alert alert-success" role="alert">@TempData["ExitoProducto"]<i class="glyphicon glyphicon-thumbs-up"></i></div>
+                }
+                @if (TempData["ErrorProducto"] != null)
+                {
+                    <!-- Alert message -->
+                    <div class="alert alert-danger" role="alert">@TempData["ErrorProducto"]<i class="glyphicon glyphicon-thumbs-down"></i></div>
+                }
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning" name="Button" value="true">Send <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    }
+} 

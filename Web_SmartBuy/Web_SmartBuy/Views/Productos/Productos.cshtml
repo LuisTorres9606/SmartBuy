@@ -1,0 +1,75 @@
+﻿@using System;
+
+@{
+    ViewBag.Title = "Productos";
+}
+
+<link href="~/Content/Cards.css" rel="stylesheet" />
+
+<h2>@ViewBag.Message</h2>
+
+
+<div class="row">
+    <form action="">
+        <div class="card col-md-3 img-rounded" style="margin-left:5px;margin-right:5px;">
+            <img src="~/Content/Image/Adidas.png" class="card-img-top img-rounded" alt="...">
+            <div class="card-body">
+                <a href='@Url.Action("Marca", "Productos", new { Marca = "Adidas" })' class="btn btn-primary">Ver Articulos</a>
+            </div>
+        </div>
+    </form>
+
+    <form action="/Productos/Productos">
+        <div class="card col-md-3 img-rounded" style="margin-left:5px;margin-right:5px;">
+            <img src="~/Content/Image/Nike.jpg" class="card-img-top img-rounded" alt="...">
+            <div class="card-body">
+                <a href='@Url.Action("Marca", "Productos", new { Marca = "Nike" })' class="btn btn-primary">Ver Articulos</a>
+            </div>
+        </div>
+    </form>
+
+    <form action="/Productos/Productos">
+        <div class="card col-md-3 img-rounded" style="margin-left:5px;margin-right:5px;">
+            <img src="~/Content/Image/Reebok.png" class="card-img-top img-rounded" alt="...">
+            <div class="card-body">
+                <a href='@Url.Action("Marca", "Productos", new { Marca = "Reebok" })' class="btn btn-primary">Ver Articulos</a>
+            </div>
+        </div>
+    </form>
+
+    <form action="/Productos/Productos">
+        <div class="card col-md-3 img-rounded" style="margin-left:5px;margin-right:5px;">
+            <img src="~/Content/Image/NewBalance.png" class="card-img-top img-rounded" alt="...">
+            <div class="card-body">
+                <a href='@Url.Action("Marca", "Productos", new { Marca = "NewBalance" })' class="btn btn-primary">Ver Articulos</a>
+            </div>
+        </div>
+    </form>
+
+    <form action="/Productos/Productos">
+        <div class="card col-md-3 img-rounded" style="margin-left:5px;margin-right:5px;">
+            <img src="~/Content/Image/Element.png" class="card-img-top img-rounded" alt="...">
+            <div class="card-body">
+                <a href='@Url.Action("Marca", "Productos", new { Marca = "Element" })' class="btn btn-primary">Ver Articulos</a>
+            </div>
+        </div>
+    </form>
+
+    <form action="/Productos/Productos">
+        <div class="card col-md-3 img-rounded" style="margin-left:5px;margin-right:5px;">
+            <img src="~/Content/Image/Converse.png" class="card-img-top img-rounded" alt="...">
+            <div class="card-body">
+                <a href='@Url.Action("Marca", "Productos", new { Marca = "Converse" })' class="btn btn-primary">Ver Articulos</a>
+            </div>
+        </div>
+    </form>
+
+    <form action="/Productos/Productos">
+        <div class="card col-md-3 img-rounded" style="margin-left:5px;margin-right:5px;">
+            <img src="~/Content/Image/Levis.png" class="card-img-top img-rounded" alt="...">
+            <div class="card-body">
+                <a href='@Url.Action("Marca", "Productos", new { Marca = "Levis" })' class="btn btn-primary">Ver Articulos</a>
+            </div>
+        </div>
+    </form>
+</div>
